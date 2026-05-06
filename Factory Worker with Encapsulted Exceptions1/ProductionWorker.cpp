@@ -8,17 +8,17 @@ using namespace std;
 ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int s, double h_pay)
 	: Employee(e_name, e_num, H_date), shift(s), hourly_pay(h_pay) 
 {
-	/*if (s == 1 || s == 2)
+	if (s == 1 || s == 2)
 	{
 		shift = s;
 	}
 
 	else
-		throw InvalidShift(s);*/
+		throw InvalidShift(s);
 
 	cout << "Code is running" << endl;
 
-	if (h_pay > 0)
+	if (h_pay >= 0)
 	{
 		hourly_pay = h_pay;
 	}
