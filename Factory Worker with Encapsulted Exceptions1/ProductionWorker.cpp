@@ -16,6 +16,8 @@ ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int 
 	else
 		throw InvalidShift(s);*/
 
+	cout << "Code is running" << endl;
+
 	if (h_pay > 0)
 	{
 		hourly_pay = h_pay;

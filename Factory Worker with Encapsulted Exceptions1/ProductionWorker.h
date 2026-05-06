@@ -39,7 +39,7 @@ public:
 		int value;
 
 	public:
-		InvalidPayrate(int val)
+		InvalidPayrate(double val)
 		{
 			value = val;
 		}
