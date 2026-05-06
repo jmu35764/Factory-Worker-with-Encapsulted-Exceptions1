@@ -39,7 +39,10 @@ public:
 		int ipay;
 
 	public:
-		InvalidPayrate();
+		InvalidPayrate(int i_pay)
+		{
+			ipay = i_pay;
+		}
 	};
 
 

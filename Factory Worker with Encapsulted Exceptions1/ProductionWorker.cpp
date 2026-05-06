@@ -22,7 +22,7 @@ ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int 
 	}
 
 	else
-		throw InvalidPayrate();
+		throw InvalidPayrate(h_pay);
 }
 
 void ProductionWorker::setShift(int s)
@@ -44,7 +44,7 @@ void ProductionWorker::setPayRate(double h_pay)
 	}
 
 	else
-		throw InvalidPayrate();
+		throw InvalidPayrate(h_pay);
 }
 
 void ProductionWorker::printProdWorkInfo() const

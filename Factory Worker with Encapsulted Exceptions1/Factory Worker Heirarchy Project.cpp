@@ -115,6 +115,46 @@ int main()
 	int Prod_shift;
 	int Prod_pr;
 
+	cout << "Enter Shift: ";
+	cin >> Prod_shift;
 
+	while (tryagain)
+	{
+		try
+		{
+			ProdTest.setShift(Prod_shift);
+
+			tryagain = false;
+		}
+
+		catch (ProductionWorker::InvalidShift)
+		{
+			cout << "Please enter either 1 or 2: ";
+			cin >> Prod_shift;
+		}
+	}
+
+	cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
+
+	cout << "Enter Pay Rate: ";
+	cin >> Prod_pr;
+
+	while (tryagain)
+	{
+		try
+		{
+			ProdTest.setPayRate(Prod_pr);
+
+			tryagain = false;
+		}
+
+		catch (ProductionWorker::InvalidPayrate)
+		{
+			cout << "Please enter either 1 or 2: ";
+			cin >> Prod_shift;
+		}
+	}
+
+	cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;
 
 }
