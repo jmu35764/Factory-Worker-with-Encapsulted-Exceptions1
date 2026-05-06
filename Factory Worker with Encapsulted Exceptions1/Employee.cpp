@@ -31,7 +31,7 @@ void Employee::setName(string e_name)
 void Employee::setEmpNum(int e_num)
 {
 	//Emp_Num = e_num;
-	if (e_num > 0 || e_num < 9999)
+	if (e_num > 0 && e_num < 9999)
 	{
 		Emp_Num = e_num;
 	}

@@ -11,6 +11,8 @@
 
 int main()
 {
+	bool tryagain = true;
+	
 	//****** EMPLOYEE CLASS TEST ******//
 
 	cout << "///// EMPLOYEE CLASS TEST /////" << endl << endl;
@@ -75,4 +77,32 @@ int main()
 	cout << endl;
 	tl.printTeamLeaderInfo();
 
+
+	//****** EMPLOYEE EXCEPTION TEST ******//
+
+	cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
+
+	Employee empTest;
+	int e_num;
+
+	cout << "Enter Employee Number: ";
+	cin >> e_num;
+
+	while (tryagain)
+	{
+		try
+		{
+			empTest.setEmpNum(e_num);
+
+			tryagain = false;
+		}
+
+		catch (Employee::InvalidEmployeeNumber)
+		{
+			cout << "Please enter a value between 0 and 9999: ";
+			cin >> e_num;
+		}
+	}
+
+	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
 }
