@@ -23,12 +23,12 @@ public:
 	class InvalidShift
 	{
 	private:
-		int ishift;
+		int value;
 
 	public:
-		InvalidShift(int is)
+		InvalidShift(int val)
 		{
-			ishift = is;
+			value = val;
 		}
 
 	};
@@ -36,12 +36,12 @@ public:
 	class InvalidPayrate
 	{
 	private:
-		int ipay;
+		int value;
 
 	public:
-		InvalidPayrate(int i_pay)
+		InvalidPayrate(int val)
 		{
-			ipay = i_pay;
+			value = val;
 		}
 	};
 
