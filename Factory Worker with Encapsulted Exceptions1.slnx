@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Factory Worker with Encapsulted Exceptions1/Factory Worker with Encapsulted Exceptions1.vcxproj" />
+</Solution>
