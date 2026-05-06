@@ -152,8 +152,8 @@ int main()
 
 		catch (ProductionWorker::InvalidPayrate)
 		{
-			cout << "Please enter either 1 or 2: ";
-			cin >> Prod_shift;
+			cout << "Please enter a value greater than 0: ";
+			cin >> Prod_pr;
 		}
 	}
 
