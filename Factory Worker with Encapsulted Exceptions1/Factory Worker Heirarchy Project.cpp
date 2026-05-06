@@ -141,8 +141,10 @@ int main()
 	cout << "Enter Pay Rate: ";
 	cin >> Prod_pr;
 
+	tryagain = true;
 	while (tryagain)
 	{
+		cout << "While loop entered";
 		try
 		{
 			ProdTest.setPayRate(Prod_pr);
