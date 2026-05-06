@@ -40,7 +40,7 @@ void ProductionWorker::setShift(int s)
 
 void ProductionWorker::setPayRate(double h_pay)
 {
-	if (h_pay > 0)
+	if (h_pay >= 0)
 	{
 		hourly_pay = h_pay;
 	}
