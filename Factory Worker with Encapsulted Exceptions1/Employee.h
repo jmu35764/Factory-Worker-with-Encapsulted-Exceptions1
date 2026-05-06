@@ -28,10 +28,6 @@ public:
 			number = num;
 		}
 
-		int getNumber() const
-		{
-			return number;
-		}
 	};
 
 	//Setters

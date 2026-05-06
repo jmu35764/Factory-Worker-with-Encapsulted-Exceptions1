@@ -19,6 +19,27 @@ public:
 	ProductionWorker(string e_name = " ", int e_num = 0, string H_date = " ", int s = 1, double h_pay = 0.0);
 
 
+	// Exception Class
+	class InvalidShift
+	{
+	private:
+		int ishift;
+
+	public:
+		InvalidShift();
+
+		geti
+
+	};
+
+	class InvalidPayrate
+	{
+
+	};
+
+
+
+
 	//Setters
 	void setShift(int s);
 
