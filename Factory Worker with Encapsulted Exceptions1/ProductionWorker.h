@@ -26,15 +26,20 @@ public:
 		int ishift;
 
 	public:
-		InvalidShift();
-
-		geti
+		InvalidShift(int is)
+		{
+			ishift = is;
+		}
 
 	};
 
 	class InvalidPayrate
 	{
+	private:
+		int ipay;
 
+	public:
+		InvalidPayrate();
 	};
 
 

@@ -105,4 +105,16 @@ int main()
 	}
 
 	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
+
+
+	//****** PRODUCTION WORKER EXCEPTION TEST ******//
+
+	cout << endl << "///// PRODUCTION WORKER EXCEPTION TEST /////" << endl << endl;
+
+	ProductionWorker ProdTest;
+	int Prod_shift;
+	int Prod_pr;
+
+
+
 }
