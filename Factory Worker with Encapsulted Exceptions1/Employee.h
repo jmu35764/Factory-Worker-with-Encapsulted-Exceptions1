@@ -16,6 +16,23 @@ public:
 	//Constructor
 	Employee(string e_name = " ", int e_num = 0, string H_date = " ");
 
+	// Exception Class
+	class InvalidEmployeeNumber
+	{
+	private:
+		int number;
+
+	public:
+		InvalidEmployeeNumber(int num)
+		{
+			number = num;
+		}
+
+		int getNumber() const
+		{
+			return number;
+		}
+	};
 
 	//Setters
 	void setName(const string e_name);
