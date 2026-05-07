@@ -15,6 +15,7 @@ Employee::Employee(string e_name, int e_num, string H_date)
 	Hire_date = H_date;
 
 	setEmpNum(e_num);
+
 }
 
 void Employee::setName(string e_name)
