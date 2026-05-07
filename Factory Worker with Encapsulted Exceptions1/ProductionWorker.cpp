@@ -6,10 +6,12 @@
 using namespace std;
 
 ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int s, double h_pay)
-	: Employee(e_name, e_num, H_date), shift(s), hourly_pay(h_pay) 
+	: Employee(e_name, e_num, H_date) //shift(s), hourly_pay(h_pay) 
 {
-	cout << "Constructor starting" << endl;
-	
+	//cout << "Constructor starting" << endl;
+	shift = s;
+	hourly_pay = h_pay;
+
 	setShift(s);
 
 	setPayRate(h_pay);
