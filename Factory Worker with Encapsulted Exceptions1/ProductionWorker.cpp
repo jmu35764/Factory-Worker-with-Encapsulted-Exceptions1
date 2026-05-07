@@ -8,7 +8,10 @@ using namespace std;
 ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int s, double h_pay)
 	: Employee(e_name, e_num, H_date), shift(s), hourly_pay(h_pay) 
 {
+	cout << "Constructor starting" << endl;
+	
 	setShift(s);
+
 	setPayRate(h_pay);
 }
 
@@ -26,7 +29,7 @@ void ProductionWorker::setShift(int s)
 void ProductionWorker::setPayRate(double h_pay)
 {
 	cout << "Entered setPayRate";
-	if (h_pay <= 0)
+	if (h_pay < 0)
 	{
 		throw InvalidPayrate(h_pay);
 		//hourly_pay = h_pay;

@@ -14,13 +14,7 @@ Employee::Employee(string e_name, int e_num, string H_date)
 	//Emp_Num = e_num;
 	Hire_date = H_date;
 
-	if (e_num > 0 || e_num < 9999)
-	{
-		Emp_Num = e_num;
-	}
-
-	else
-		throw InvalidEmployeeNumber(e_num);
+	setEmpNum(e_num);
 }
 
 void Employee::setName(string e_name)

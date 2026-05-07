@@ -14,7 +14,7 @@ private:
 
 public:
 	//Constructor
-	Employee(string e_name = " ", int e_num = 0, string H_date = " ");
+	Employee(string e_name = " ", int e_num = 1, string H_date = " ");
 
 	// Exception Class
 	class InvalidEmployeeNumber
