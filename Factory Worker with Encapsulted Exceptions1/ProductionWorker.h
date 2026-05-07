@@ -16,7 +16,7 @@ private:
 
 public:
 	//Constructor
-	ProductionWorker(string e_name = " ", int e_num = 0, string H_date = " ", int s = 1, double h_pay = 0);
+	ProductionWorker(string e_name = " ", int e_num = 0, string H_date = " ", int s = 0, double h_pay = 0);
 
 
 	// Exception Class
@@ -36,7 +36,7 @@ public:
 	class InvalidPayrate
 	{
 	private:
-		int value;
+		double value;
 
 	public:
 		InvalidPayrate(double val)

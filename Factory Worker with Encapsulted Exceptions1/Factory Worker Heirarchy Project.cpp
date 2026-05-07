@@ -80,7 +80,7 @@ int main()
 
 	//****** EMPLOYEE EXCEPTION TEST ******//
 
-	/*cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
+	cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
 
 	Employee empTest;
 	int e_num;
@@ -104,7 +104,7 @@ int main()
 		}
 	}
 
-	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;*/
+	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
 
 
 	//****** PRODUCTION WORKER EXCEPTION TEST ******//
@@ -154,7 +154,7 @@ int main()
 
 		catch (ProductionWorker::InvalidPayrate)
 		{
-			cout << "Please enter a value greater than 0: ";
+			cout << "Please enter a non-negative value: ";
 			cin >> Prod_pr;
 		}
 	}

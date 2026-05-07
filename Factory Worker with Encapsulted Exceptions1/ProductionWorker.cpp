@@ -8,25 +8,8 @@ using namespace std;
 ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int s, double h_pay)
 	: Employee(e_name, e_num, H_date), shift(s), hourly_pay(h_pay) 
 {
-	if (s == 1 || s == 2)
-	{
-		shift = s;
-	}
-
-	else
-		throw InvalidShift(s);
-
-	cout << "Code is running" << endl;
-
+	setShift(s);
 	setPayRate(h_pay);
-	
-	/*if (h_pay > 0)
-	{
-		hourly_pay = h_pay;
-	}
-
-	else
-		throw InvalidPayrate(h_pay);*/
 }
 
 void ProductionWorker::setShift(int s)
@@ -43,7 +26,7 @@ void ProductionWorker::setShift(int s)
 void ProductionWorker::setPayRate(double h_pay)
 {
 	cout << "Entered setPayRate";
-	if (h_pay < 0)
+	if (h_pay <= 0)
 	{
 		throw InvalidPayrate(h_pay);
 		//hourly_pay = h_pay;
