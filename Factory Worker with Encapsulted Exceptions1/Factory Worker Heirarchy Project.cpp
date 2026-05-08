@@ -15,7 +15,7 @@ int main()
 	
 	//****** EMPLOYEE EXCEPTION TEST ******//
 
-	/*cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
+	cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
 
 	Employee empTest;
 	int e_num;
@@ -39,7 +39,7 @@ int main()
 		}
 	}
 
-	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;*/
+	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
 
 
 	//****** PRODUCTION WORKER EXCEPTION TEST ******//
@@ -81,7 +81,7 @@ int main()
 	tryagain = true;
 	while (tryagain)
 	{
-		cout << "While loop entered";
+		//cout << "While loop entered";
 		try
 		{
 			ProdTest.setPayRate(Prod_pr);
@@ -97,5 +97,8 @@ int main()
 	}
 
 	cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;
+
+
+
 
 }
