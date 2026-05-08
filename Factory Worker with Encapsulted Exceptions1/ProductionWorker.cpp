@@ -28,7 +28,7 @@ void ProductionWorker::setShift(int s)
 
 void ProductionWorker::setPayRate(double h_pay)
 {
-	cout << "Entered setPayRate";
+	//cout << "Entered setPayRate";
 	if (h_pay < 0)
 	{
 		throw InvalidPayrate(h_pay);
