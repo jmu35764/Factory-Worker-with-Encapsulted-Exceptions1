@@ -42,7 +42,7 @@ void Employee::setHireDate(string H_date)
 
 void Employee::printEmpInfo() const
 {
-	cout << "printEmpInfo is called" << endl << endl;
+	//cout << "printEmpInfo is called" << endl << endl;
 
 	cout << left << setw(18) << "Name: " << Emp_Name << endl;
 	cout << left << setw(18) << "Employee Number: " << Emp_Num << endl;

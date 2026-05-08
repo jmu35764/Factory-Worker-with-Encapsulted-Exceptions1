@@ -195,9 +195,81 @@ int main()
 			}
 
 			pw->printProdWorkInfo();
+
+			delete pw;
+
+			cout << endl;
 		}
 
+		else if (emp_choice == 2)
+		{
+			double salary;
+			double bonus;
 
+
+		}
+
+		else if (emp_choice == 3)
+		{
+			TeamLeader* tl = new TeamLeader();
+			tl->setEmpNum(e_num);
+
+			cout << "Enter Shift: ";
+			cin >> Prod_shift;
+
+			//tryagain = true;
+
+			while (tryagain)
+			{
+				try
+				{
+					tl->setShift(Prod_shift);
+
+					tryagain = false;
+				}
+
+				catch (ProductionWorker::InvalidShift)
+				{
+					cout << "Please enter either 1 or 2: ";
+					cin >> Prod_shift;
+				}
+			}
+
+			//cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
+
+			cout << "Enter Pay Rate: ";
+			cin >> Prod_pr;
+
+			tryagain = true;
+			while (tryagain)
+			{
+				//cout << "While loop entered";
+				try
+				{
+					tl->setPayRate(Prod_pr);
+
+					tryagain = false;
+				}
+
+				catch (ProductionWorker::InvalidPayrate)
+				{
+					cout << "Please enter a non-negative value: ";
+					cin >> Prod_pr;
+				}
+			}
+
+			tl->printProdWorkInfo();
+
+			delete tl;
+
+			cout << endl;
+
+		}
+
+		else if (emp_choice == 4)
+		{
+			break;
+		}
 	}
 
 }
