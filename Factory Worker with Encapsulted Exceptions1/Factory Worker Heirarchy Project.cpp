@@ -8,23 +8,28 @@
 #include "ShiftSupervisor.h"
 #include "TeamLeader.h"
 
+using namespace std;
 
 int main()
 {
 	bool tryagain = true;
+	
 	int e_num;
+	string e_name;
+	string e_hiredate;
+	
 	int Prod_shift;
 	int Prod_pr;
 	
 	//****** EMPLOYEE EXCEPTION TEST ******//
 
-	/*cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
+	std::cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
 
 	Employee empTest;
 	int e_num;
 
-	cout << "Enter Employee Number: ";
-	cin >> e_num;
+	std::cout << "Enter Employee Number: ";
+	std::cin >> e_num;
 
 	while (tryagain)
 	{
@@ -37,17 +42,17 @@ int main()
 
 		catch (Employee::InvalidEmployeeNumber)
 		{
-			cout << "Please enter a value between 0 and 9999: ";
-			cin >> e_num;
+			std::cout << "Please enter a value between 0 and 9999: ";
+			std::cin >> e_num;
 		}
 	}
 
-	cout << "The Employee Number is: " << empTest.getEmpNum() << endl;*/
+	std::cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
 
 
 	//****** PRODUCTION WORKER EXCEPTION TEST ******//
 
-	/*cout << endl << "///// PRODUCTION WORKER EXCEPTION TEST /////" << endl << endl;
+	std::cout << endl << "///// PRODUCTION WORKER EXCEPTION TEST /////" << endl << endl;
 
 	
 	ProductionWorker ProdTest; // your code here
@@ -55,8 +60,8 @@ int main()
 	int Prod_shift;
 	int Prod_pr;
 
-	cout << "Enter Shift: ";
-	cin >> Prod_shift;
+	std::cout << "Enter Shift: ";
+	std::cin >> Prod_shift;
 
 	//tryagain = true;
 	
@@ -71,20 +76,20 @@ int main()
 
 		catch (ProductionWorker::InvalidShift)
 		{
-			cout << "Please enter either 1 or 2: ";
-			cin >> Prod_shift;
+			std::cout << "Please enter either 1 or 2: ";
+			std::cin >> Prod_shift;
 		}
 	}
 
-	cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
+	std::cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
 
-	cout << "Enter Pay Rate: ";
-	cin >> Prod_pr;
+	std::cout << "Enter Pay Rate: ";
+	std::cin >> Prod_pr;
 
 	tryagain = true;
 	while (tryagain)
 	{
-		//cout << "While loop entered";
+		//std::cout << "While loop entered";
 		try
 		{
 			ProdTest.setPayRate(Prod_pr);
@@ -94,37 +99,42 @@ int main()
 
 		catch (ProductionWorker::InvalidPayrate)
 		{
-			cout << "Please enter a non-negative value: ";
-			cin >> Prod_pr;
+			std::cout << "Please enter a non-negative value: ";
+			std::cin >> Prod_pr;
 		}
 	}
 
-	cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;*/
+	std::cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;
 
 
 	//****** SELECT SCREEN EXCEPTION TEST ******//
 
-	cout << endl << "///// SELECT SCREEN EXCEPTION TEST /////" << endl << endl;
+	std::cout << endl << "///// SELECT SCREEN EXCEPTION TEST /////" << endl << endl;
 
 	bool choicetrue = true;
 	int emp_choice;
 
 	while (true)
 	{
-		cout << "// SELECT AN EMPLOYEE TYPE" << endl
+		std::cout << "// SELECT AN EMPLOYEE TYPE" << endl
 			<< "1. Produciton Worker" << endl
 			<< "2. Shift Supervisor" << endl
 			<< "3. Team Leader" << endl
 			<< "4. Exit" << endl;
 
-		cin >> emp_choice;
+		std::cin >> emp_choice;
 
 		
-		cout << "Enter Employee Number: ";
-		cin >> e_num;
+		std::cout << "Enter Employee Number: ";
+		std::cin >> e_num;
 
-		//Employee 
+		std::cout << "Enter Employee Name: ";
+		std::cin >> e_name;
 
+		std::cout << "Enter Hire Date: ";
+		std::cin >> e_hiredate;
+		
+	
 		while (tryagain)
 		{
 			try
@@ -138,8 +148,8 @@ int main()
 
 			catch (Employee::InvalidEmployeeNumber)
 			{
-				cout << "Please enter a value between 0 and 9999: ";
-				cin >> e_num;
+				std::cout << "Please enter a value between 0 and 9999: ";
+				std::cin >> e_num;
 			}
 		}
 
@@ -149,9 +159,11 @@ int main()
 			ProductionWorker* pw = new ProductionWorker();
 
 			pw->setEmpNum(e_num);
+			pw->setName(e_name);
+			pw->setHireDate(e_hiredate);
 
-			cout << "Enter Shift: ";
-			cin >> Prod_shift;
+			std::cout << "Enter Shift: ";
+			std::cin >> Prod_shift;
 
 			//tryagain = true;
 
@@ -166,20 +178,20 @@ int main()
 
 				catch (ProductionWorker::InvalidShift)
 				{
-					cout << "Please enter either 1 or 2: ";
-					cin >> Prod_shift;
+					std::cout << "Please enter either 1 or 2: ";
+					std::cin >> Prod_shift;
 				}
 			}
 
-			//cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
+			//std::cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
 
-			cout << "Enter Pay Rate: ";
-			cin >> Prod_pr;
+			std::cout << "Enter Pay Rate: ";
+			std::cin >> Prod_pr;
 
 			tryagain = true;
 			while (tryagain)
 			{
-				//cout << "While loop entered";
+				//std::cout << "While loop entered";
 				try
 				{
 					pw->setPayRate(Prod_pr);
@@ -189,8 +201,8 @@ int main()
 
 				catch (ProductionWorker::InvalidPayrate)
 				{
-					cout << "Please enter a non-negative value: ";
-					cin >> Prod_pr;
+					std::cout << "Please enter a non-negative value: ";
+					std::cin >> Prod_pr;
 				}
 			}
 
@@ -198,13 +210,34 @@ int main()
 
 			delete pw;
 
-			cout << endl;
+			std::cout << endl;
 		}
 
 		else if (emp_choice == 2)
 		{
 			double salary;
 			double bonus;
+
+			ShiftSupervisor* ss = new ShiftSupervisor;
+
+			ss->setEmpNum(e_num);
+			ss->setName(e_name);
+			ss->setHireDate(e_hiredate);
+
+			std::cout << "Enter Salary: ";
+			std::cin >> salary;
+			ss->setAnnSalary(salary);
+
+			std::cout << "Enter bonus: ";
+			std::cin >> bonus;
+			ss->setAnnBonus(bonus);
+
+			ss->printShiftSupInfo();
+
+			delete ss;
+
+			std::cout << endl;
+
 
 
 		}
@@ -214,8 +247,8 @@ int main()
 			TeamLeader* tl = new TeamLeader();
 			tl->setEmpNum(e_num);
 
-			cout << "Enter Shift: ";
-			cin >> Prod_shift;
+			std::cout << "Enter Shift: ";
+			std::cin >> Prod_shift;
 
 			//tryagain = true;
 
@@ -230,15 +263,15 @@ int main()
 
 				catch (ProductionWorker::InvalidShift)
 				{
-					cout << "Please enter either 1 or 2: ";
-					cin >> Prod_shift;
+					std::cout << "Please enter either 1 or 2: ";
+					std::cin >> Prod_shift;
 				}
 			}
 
-			//cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
+			//std::cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
 
-			cout << "Enter Pay Rate: ";
-			cin >> Prod_pr;
+			std::cout << "Enter Pay Rate: ";
+			std::cin >> Prod_pr;
 
 			tryagain = true;
 			while (tryagain)
@@ -253,8 +286,8 @@ int main()
 
 				catch (ProductionWorker::InvalidPayrate)
 				{
-					cout << "Please enter a non-negative value: ";
-					cin >> Prod_pr;
+					std::cout << "Please enter a non-negative value: ";
+					std::cin >> Prod_pr;
 				}
 			}
 
@@ -262,7 +295,7 @@ int main()
 
 			delete tl;
 
-			cout << endl;
+			std::cout << endl;
 
 		}
 

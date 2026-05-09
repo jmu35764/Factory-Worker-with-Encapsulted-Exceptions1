@@ -16,7 +16,7 @@ private:
 
 public:
 	//Constructor
-	ProductionWorker(string e_name = " ", int e_num = 1, string H_date = " ", int s = 1, double h_pay = 1);
+	ProductionWorker(string e_name = " ", int e_num = 1, string H_date = " ", int s = 1, double h_pay = 0);
 
 
 	// Exception Class
