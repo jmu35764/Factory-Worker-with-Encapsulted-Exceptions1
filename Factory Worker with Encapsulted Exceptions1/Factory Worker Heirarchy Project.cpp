@@ -126,7 +126,8 @@ int main()
 
 		
 		std::cout << "Enter Employee Name: ";
-		std::cin >> e_name;
+		std::cin.ignore();
+		std::getline(std::cin, e_name);
 
 		std::cout << "Enter Hire Date: ";
 		std::cin >> e_hiredate;
