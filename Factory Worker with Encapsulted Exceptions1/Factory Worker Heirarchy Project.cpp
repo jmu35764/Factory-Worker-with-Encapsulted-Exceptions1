@@ -125,14 +125,15 @@ int main()
 		std::cin >> emp_choice;
 
 		
-		std::cout << "Enter Employee Number: ";
-		std::cin >> e_num;
-
 		std::cout << "Enter Employee Name: ";
 		std::cin >> e_name;
 
 		std::cout << "Enter Hire Date: ";
 		std::cin >> e_hiredate;
+
+		std::cout << "Enter Employee Number: ";
+		std::cin >> e_num;
+
 		
 	
 		while (tryagain)
@@ -206,6 +207,8 @@ int main()
 				}
 			}
 
+			std::cout << endl;
+
 			pw->printProdWorkInfo();
 
 			delete pw;
@@ -232,6 +235,8 @@ int main()
 			std::cin >> bonus;
 			ss->setAnnBonus(bonus);
 
+			std::cout << endl;
+			
 			ss->printShiftSupInfo();
 
 			delete ss;
@@ -291,6 +296,8 @@ int main()
 				}
 			}
 
+			std::cout << endl;
+			
 			tl->printProdWorkInfo();
 
 			delete tl;
