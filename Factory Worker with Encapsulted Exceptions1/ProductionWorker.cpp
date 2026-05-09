@@ -17,7 +17,7 @@ ProductionWorker::ProductionWorker(string e_name, int e_num, string H_date, int 
 
 void ProductionWorker::setShift(int s)
 {
-	if (s < 1 || s < 2)
+	if (s == 1 || s == 2)
 	{
 		shift = s;
 	}
@@ -46,14 +46,14 @@ void ProductionWorker::printProdWorkInfo() const
 
 	//cout << "printProdWorkInfo is called" << endl << endl;
 
-	cout << left << setw(18) << "Shift: ";
+	cout << left << setw(18) << "Shift: " << shift;
 
 		if (shift == 1)
 		{
 			cout << "Day " << endl;
 		}
 
-		else
+		else if (shift == 2)
 		{
 			cout << "Night" << endl;
 		}

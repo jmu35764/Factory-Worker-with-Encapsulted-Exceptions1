@@ -155,9 +155,10 @@ int main()
 			}
 		}
 
-
+		
 		if (emp_choice == 1)
 		{
+			tryagain = true;
 			ProductionWorker* pw = new ProductionWorker();
 
 			pw->setEmpNum(e_num);
@@ -258,6 +259,7 @@ int main()
 
 			//tryagain = true;
 
+			tryagain = true;
 			while (tryagain)
 			{
 				try
