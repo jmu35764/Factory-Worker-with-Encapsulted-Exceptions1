@@ -187,6 +187,11 @@ int main()
 		else if (emp_choice == 3)
 		{	
 			TeamLeader* tl = new TeamLeader();
+
+			tl->setEmpNum(e_num);
+			tl->setName(e_name);
+			tl->setHireDate(e_hiredate);
+
 			tl->setEmpNum(e_num);
 
 			std::cout << "Enter Monthly Bonus: ";
@@ -258,7 +263,7 @@ int main()
 
 			std::cout << endl;
 			
-			tl->printProdWorkInfo();
+			tl->printTeamLeaderInfo();
 
 			delete tl;
 
