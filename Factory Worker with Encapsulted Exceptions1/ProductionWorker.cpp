@@ -44,9 +44,7 @@ void ProductionWorker::printProdWorkInfo() const
 {
 	printEmpInfo();
 
-	//cout << "printProdWorkInfo is called" << endl << endl;
-
-	cout << left << setw(18) << "Shift: " << shift;
+	cout << left << setw(18) << "Shift: ";
 
 		if (shift == 1)
 		{

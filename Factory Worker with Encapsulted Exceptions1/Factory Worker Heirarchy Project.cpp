@@ -14,12 +14,25 @@ int main()
 {
 	bool tryagain = true;
 	
+	// Employee Variables
 	int e_num;
 	string e_name;
 	string e_hiredate;
 	
+	// Production Worker Variables 
 	int Prod_shift;
 	int Prod_pr;
+
+	//Shift Supervisor Variables
+	double salary;
+	double bonus;
+
+	// Team Leader Variables
+	double monthlybonus;
+	int reqtraininghours;
+	int attendtraininghours;
+
+
 	
 	//****** SELECT SCREEN EXCEPTION TEST ******//
 
@@ -50,7 +63,8 @@ int main()
 		std::cin >> e_num;
 
 		
-	
+		// Catch and throw loop for ensuring the Employee Number
+		// is an acceptable value
 		while (tryagain)
 		{
 			try
@@ -59,9 +73,12 @@ int main()
 
 				temp.setEmpNum(e_num);
 
+				// If there are no issues with the Employee Number value
+				// end the while loop
 				tryagain = false;
 			}
 
+			// If there is an issue, display the following
 			catch (Employee::InvalidEmployeeNumber)
 			{
 				std::cout << "Please enter a value between 0 and 9999: ";
@@ -82,17 +99,20 @@ int main()
 			std::cout << "Enter Shift: ";
 			std::cin >> Prod_shift;
 
-			//tryagain = true;
-
+			// Catch and throw loop for ensuring the shift entered
+			// is an acceptable value
 			while (tryagain)
 			{
 				try
 				{
 					pw->setShift(Prod_shift);
 
+					// If there are no issues with the shift value
+					// end the while loop
 					tryagain = false;
 				}
 
+				// If there is an issue, display the following
 				catch (ProductionWorker::InvalidShift)
 				{
 					std::cout << "Please enter either 1 or 2: ";
@@ -100,22 +120,26 @@ int main()
 				}
 			}
 
-			//std::cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
 
 			std::cout << "Enter Pay Rate: ";
 			std::cin >> Prod_pr;
 
 			tryagain = true;
+
+			// Catch and throw loop for ensuring the PayRate entered
+			// is an acceptable value
 			while (tryagain)
 			{
-				//std::cout << "While loop entered";
 				try
 				{
 					pw->setPayRate(Prod_pr);
 
+					// If there are no issues with the PayRate value
+					// end the while loop
 					tryagain = false;
 				}
 
+				// If there is an issue, display the following
 				catch (ProductionWorker::InvalidPayrate)
 				{
 					std::cout << "Please enter a non-negative value: ";
@@ -134,9 +158,6 @@ int main()
 
 		else if (emp_choice == 2)
 		{
-			double salary;
-			double bonus;
-
 			ShiftSupervisor* ss = new ShiftSupervisor;
 
 			ss->setEmpNum(e_num);
@@ -164,25 +185,43 @@ int main()
 		}
 
 		else if (emp_choice == 3)
-		{
+		{	
 			TeamLeader* tl = new TeamLeader();
 			tl->setEmpNum(e_num);
 
+			std::cout << "Enter Monthly Bonus: ";
+			std::cin >> monthlybonus;
+			tl->setMonthBonus(monthlybonus);
+
+			std::cout << "Enter Required Training Hours: ";
+			std::cin >> reqtraininghours;
+			tl->setRegTrainingHours(reqtraininghours);
+
+			std::cout << "Enter Attended Training Hours: ";
+			std::cin >> attendtraininghours;
+			tl->setAttendTrainHours(attendtraininghours);
+			
 			std::cout << "Enter Shift: ";
 			std::cin >> Prod_shift;
 
-			//tryagain = true;
 
 			tryagain = true;
+
+			// Catch and throw loop for ensuring the shift entered
+			// is an acceptable value
 			while (tryagain)
 			{
 				try
 				{
 					tl->setShift(Prod_shift);
 
+
+					// If there are no issues with the shift value
+					// end the while loop
 					tryagain = false;
 				}
 
+				// If there is an issue, display the following
 				catch (ProductionWorker::InvalidShift)
 				{
 					std::cout << "Please enter either 1 or 2: ";
@@ -190,22 +229,26 @@ int main()
 				}
 			}
 
-			//std::cout << "The Production Worker shift is: " << ProdTest.getShift() << endl << endl;
 
 			std::cout << "Enter Pay Rate: ";
 			std::cin >> Prod_pr;
 
+			// Catch and throw loop for ensuring the PayRate entered
+			// is an acceptable value
 			tryagain = true;
 			while (tryagain)
 			{
-				//cout << "While loop entered";
 				try
 				{
 					tl->setPayRate(Prod_pr);
 
+					
+					// If there are no issues with the PayRate value
+					// end the while loop
 					tryagain = false;
 				}
 
+				// If there is an issue, display the following
 				catch (ProductionWorker::InvalidPayrate)
 				{
 					std::cout << "Please enter a non-negative value: ";
