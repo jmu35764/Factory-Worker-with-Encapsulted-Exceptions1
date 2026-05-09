@@ -271,6 +271,7 @@ int main()
 
 		}
 
+		// End code
 		else if (emp_choice == 4)
 		{
 			break;
