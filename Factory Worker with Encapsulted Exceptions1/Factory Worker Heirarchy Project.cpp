@@ -23,10 +23,10 @@ int main()
 	
 	//****** EMPLOYEE EXCEPTION TEST ******//
 
-	std::cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
+	/*std::cout << endl << "///// EMPLOYEE EXCEPTION TEST /////" << endl << endl;
 
 	Employee empTest;
-	int e_num;
+	//int e_num;
 
 	std::cout << "Enter Employee Number: ";
 	std::cin >> e_num;
@@ -47,12 +47,12 @@ int main()
 		}
 	}
 
-	std::cout << "The Employee Number is: " << empTest.getEmpNum() << endl;
+	std::cout << "The Employee Number is: " << empTest.getEmpNum() << endl;*/
 
 
 	//****** PRODUCTION WORKER EXCEPTION TEST ******//
 
-	std::cout << endl << "///// PRODUCTION WORKER EXCEPTION TEST /////" << endl << endl;
+	/*std::cout << endl << "///// PRODUCTION WORKER EXCEPTION TEST /////" << endl << endl;
 
 	
 	ProductionWorker ProdTest; // your code here
@@ -104,7 +104,7 @@ int main()
 		}
 	}
 
-	std::cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;
+	std::cout << "The Production Worker Pay Rate is: " << ProdTest.getHourlyPay() << endl << endl;*/
 
 
 	//****** SELECT SCREEN EXCEPTION TEST ******//
